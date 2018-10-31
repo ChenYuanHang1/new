@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <!-- <parent>
+    <groupId>com.utstar.mydemo</groupId>
+    <artifactId>demo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent> -->
+  
+  <parent>
+    <groupId>org.opendaylight.odlparent</groupId>
+    <artifactId>karaf-parent</artifactId>
+    <version>1.8.1-Carbon</version>
+  </parent>
+  
+  <groupId>com.utstar.mydemo</groupId>
+  <artifactId>demo-karaf</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
+  <name>ODL :: com.utstar.mydemo :: ${project.artifactId}</name>
+  
+  <properties>
+    <karaf.localFeature>odl-mydemo-ui</karaf.localFeature>
+  </properties>
+  
+  <dependencyManagement>
+    <!-- <dependencies>
+    <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>demo-artifacts</artifactId>
+        <version>${project.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies> -->
+  </dependencyManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.karaf.features</groupId>
+      <artifactId>framework</artifactId>
+      <type>kar</type>
+    </dependency>
+
+    <!-- <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>demo-feature</artifactId>
+      <classifier>features</classifier>
+      <type>xml</type>
+      <scope>runtime</scope>
+    </dependency> -->
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
