@@ -32,7 +32,7 @@ module demo {
     		"RFC 2579, section 2.";
     }
     
-    container demo {
+    container data-model {
     	presence
     		"Indicate service is availavle";
     	description 

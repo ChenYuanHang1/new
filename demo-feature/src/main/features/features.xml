@@ -13,12 +13,12 @@
     <feature version='${mdsal.model.version}'>odl-mdsal-models</feature>
     <bundle>mvn:com.utstar.mydemo/demo-api/{{VERSION}}</bundle>
   </feature>
-  <feature name='odl-mydemoA' version='${project.version}' description='OpenDaylight :: mydemo'>
+  <feature name='odl-provider' version='${project.version}' description='OpenDaylight :: mydemo'>
     <feature version='${mdsal.version}'>odl-mdsal-broker</feature>
     <feature version='${project.version}'>odl-mydemo-api</feature>
     <bundle>mvn:com.utstar.mydemo/demo-provider/{{VERSION}}</bundle>
   </feature>
-  <feature name='odl-mydemoB' version='${project.version}' description='OpenDaylight :: mydemo'>
+  <feature name='odl-consumer' version='${project.version}' description='OpenDaylight :: mydemo'>
     <feature version='${mdsal.version}'>odl-mdsal-broker</feature>
     <feature version='${project.version}'>odl-mydemo-api</feature>
     <bundle>mvn:com.utstar.mydemo/demo-consumer/{{VERSION}}</bundle>

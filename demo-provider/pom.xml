@@ -21,12 +21,29 @@
   <packaging>bundle</packaging>
   
   <dependencies>
+  	<dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>demo-api</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+		<groupId>org.opendaylight.controller</groupId>
+		<artifactId>sal-common-util</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>org.opendaylight.controller</groupId>
+		<artifactId>sal-binding-api</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>org.osgi</groupId>
+		<artifactId>org.osgi.core</artifactId>
+	</dependency>
+    
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <scope>test</scope>
     </dependency>
-
     <dependency>
       <groupId>org.mockito</groupId>
       <artifactId>mockito-core</artifactId>

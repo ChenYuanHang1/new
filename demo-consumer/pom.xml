@@ -16,6 +16,11 @@
   <packaging>bundle</packaging>
   
   <dependencies>
+  	<dependency>
+  	<groupId>${project.groupId}</groupId>
+      <artifactId>demo-api</artifactId>
+      <version>${project.version}</version>
+    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
