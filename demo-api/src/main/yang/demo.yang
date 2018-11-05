@@ -47,7 +47,7 @@ module demo {
     	}
     	
     	leaf attribute2 {
-    		type DisplayString;
+    		type uint32;
     		config false;
     		mandatory true;
     		description 
@@ -64,12 +64,32 @@ module demo {
     }
     
     rpc greet {
+    	
     	description
     		"writes the input data to data tree,
     		notification will be sent when finish writing
     		";
+    	
     	input {
     		leaf inputdata {
+    			type uint32 {
+    				range "1 .. 10";
+    			}
+    			default '6';
+    			description
+    				"variable from 1 to 10";
+    		}
+    		
+    		leaf demotype {
+    			type identityref {
+    				base demo:demo-type;
+    			}
+    			default 'type1';
+    		}
+    	}
+    	
+    	output {
+    		leaf outputdata {
     			type uint32 {
     				range "1 .. 10";
     			}
@@ -88,7 +108,8 @@ module demo {
     }
     
     notification greet-message {
-    	description
-    		"Indicate data changed";
+    	leaf message {
+    	 	type string;
+    	 }
     }
 }
