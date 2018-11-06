@@ -10,7 +10,7 @@
   <parent>
     <groupId>org.opendaylight.controller</groupId>
     <artifactId>config-parent</artifactId>
-    <version>0.6.1-Carbon</version>
+    <version>0.6.0-Carbon</version>
     <relativePath/>
   </parent>
   

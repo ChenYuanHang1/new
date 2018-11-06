@@ -17,17 +17,20 @@
   </parent>
  
  <groupId>com.utstar.mydemo</groupId>
-  <artifactId>demo-feature</artifactId>
+  <artifactId>demo-features</artifactId>
   <version>0.1.0-SNAPSHOT</version>
   <name>ODL :: org.opendaylight.mydemo :: ${project.artifactId}</name>
   
   <properties>
-    <mdsal.model.version>0.10.1-Carbon</mdsal.model.version>
-    <mdsal.version>1.5.1-Carbon</mdsal.version>
-    <restconf.version>1.5.1-Carbon</restconf.version>
-    <yangtools.version>1.1.1-Carbon</yangtools.version>
-    <dluxapps.version>0.5.1-Carbon</dluxapps.version>
-    <configfile.directory>etc/opendaylight/karaf</configfile.directory>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.7</maven.compiler.target>
+		<mdsal.model.version>0.10.1-Carbon</mdsal.model.version>
+		<mdsal.version>1.5.1-Carbon</mdsal.version>
+		<restconf.version>1.5.1-Carbon</restconf.version>
+		<yangtools.version>1.1.1-Carbon</yangtools.version>
+		<dluxapps.version>0.5.1-Carbon</dluxapps.version>
+		<configfile.directory>etc/opendaylight/karaf</configfile.directory>
   </properties>
   
   <dependencyManagement>
@@ -109,10 +112,5 @@
       <artifactId>demo-api</artifactId>
       <version>${project.version}</version>
     </dependency>
-    <!-- <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>demo-cli</artifactId>
-      <version>${project.version}</version>
-    </dependency> -->
   </dependencies>
 </project>
