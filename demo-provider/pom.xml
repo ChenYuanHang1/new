@@ -16,7 +16,7 @@
   
   <groupId>com.utstar.mydemo</groupId>
   <artifactId>demo-provider</artifactId>
-  <version>0.1.0-SNAPSHOT</version>
+  <version>0.0.1-SNAPSHOT</version>
   <name>ODL :: com.utstar.mydemo :: ${project.artifactId}</name>
   <packaging>bundle</packaging>
   

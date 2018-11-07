@@ -11,17 +11,13 @@
   
   <feature name='odl-mydemo-api' version='${project.version}' description='OpenDaylight :: mydemo :: api'>
     <feature version='${mdsal.model.version}'>odl-mdsal-models</feature>
-    <bundle>mvn:com.utstar.mydemo/demo-api/{{VERSION}}</bundle>
+    <bundle>mvn:com.utstar.mydemo/demo-api/0.0.1-SNAPSHOT</bundle>
   </feature>
-  <feature name='odl-provider' version='${project.version}' description='OpenDaylight :: mydemo'>
+  <feature name='odl-mydemo' version='${project.version}' description='OpenDaylight :: mydemo::ProCon'>
     <feature version='${mdsal.version}'>odl-mdsal-broker</feature>
     <feature version='${project.version}'>odl-mydemo-api</feature>
-    <bundle>mvn:com.utstar.mydemo/demo-provider/{{VERSION}}</bundle>
-  </feature>
-  <feature name='odl-consumer' version='${project.version}' description='OpenDaylight :: mydemo'>
-    <feature version='${mdsal.version}'>odl-mdsal-broker</feature>
-    <feature version='${project.version}'>odl-mydemo-api</feature>
-    <bundle>mvn:com.utstar.mydemo/demo-consumer/{{VERSION}}</bundle>
+    <bundle>mvn:com.utstar.mydemo/demo-provider/0.0.1-SNAPSHOT</bundle>
+    <bundle>mvn:com.utstar.mydemo/demo-consumer/0.0.1-SNAPSHOT</bundle>
   </feature>
   <feature name='odl-mydemo-rest' version='${project.version}' description='OpenDaylight :: mydemo :: REST'>
     <feature version="${project.version}">odl-mydemo</feature>

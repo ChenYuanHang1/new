@@ -18,7 +18,7 @@
  
  <groupId>com.utstar.mydemo</groupId>
   <artifactId>demo-features</artifactId>
-  <version>0.1.0-SNAPSHOT</version>
+  <version>0.0.1-SNAPSHOT</version>
   <name>ODL :: org.opendaylight.mydemo :: ${project.artifactId}</name>
   
   <properties>
@@ -99,17 +99,17 @@
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
+      <artifactId>demo-api</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
       <artifactId>demo-provider</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>demo-consumer</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>demo-api</artifactId>
       <version>${project.version}</version>
     </dependency>
   </dependencies>

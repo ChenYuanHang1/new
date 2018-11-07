@@ -7,9 +7,9 @@
  */
 package com.utstar.demo.consumer;
 
-import org.opendaylight.yang.gen.v1.urn.opendaylight.params.xml.ns.yang.demo.rev150105.DemoListener;
-import org.opendaylight.yang.gen.v1.urn.opendaylight.params.xml.ns.yang.demo.rev150105.DemoService;
-import org.opendaylight.yang.gen.v1.urn.opendaylight.params.xml.ns.yang.demo.rev150105.GreetMessage;
+import org.opendaylight.yang.gen.v1.urn.opendaylight.params.xml.ns.yang.demo.rev181107.DemoListener;
+import org.opendaylight.yang.gen.v1.urn.opendaylight.params.xml.ns.yang.demo.rev181107.DemoService;
+import org.opendaylight.yang.gen.v1.urn.opendaylight.params.xml.ns.yang.demo.rev181107.GreetMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

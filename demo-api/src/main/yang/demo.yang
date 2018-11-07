@@ -3,109 +3,31 @@ module demo {
     namespace "urn:opendaylight:params:xml:ns:yang:demo";
     prefix "demo";
 
-    revision "2015-01-05" {
+    revision "2018-11-07" {
         description "Initial revision of demo model";
     }
     
-    identity demo-type {
-    	description
-    		"base type";
-    }
-    
-    identity type1 {
-    	base demo:demo-type;
-    	description "type1";
-    }
-    
-    identity type2 {
-    	base demo:demo-type;
-    	description "type2";
-    }
-    
-    typedef DisplayString {
-    	type string {
-    		length "0 .. 255";
-    	}
-    	description
-    		"the sample length is 0 .. 255";
-    	reference 
-    		"RFC 2579, section 2.";
-    }
-    
     container data-model {
-    	presence
-    		"Indicate service is availavle";
-    	description 
-    		"top-level container";
     	
     	leaf attribute1 {
-    		type DisplayString;
-    		config false;
-    		mandatory true;
-    		description 
-    			"attribute 1";
+    		type string;
     	}
     	
-    	leaf attribute2 {
-    		type uint32;
-    		config false;
-    		mandatory true;
-    		description 
-    			"attribute 2";
-    	}
-    	
-    	leaf attribute3 {
-    		type DisplayString;
-    		config false;
-    		mandatory false;
-    		description 
-    			"attribute 3";
-    	}
     }
     
     rpc greet {
-    	
-    	description
-    		"writes the input data to data tree,
-    		notification will be sent when finish writing
-    		";
-    	
     	input {
     		leaf inputdata {
-    			type uint32 {
-    				range "1 .. 10";
-    			}
-    			default '6';
-    			description
-    				"variable from 1 to 10";
-    		}
-    		
-    		leaf demotype {
-    			type identityref {
-    				base demo:demo-type;
-    			}
-    			default 'type1';
+    			type string;
     		}
     	}
     	
     	output {
     		leaf outputdata {
-    			type uint32 {
-    				range "1 .. 10";
+    			type string;
     			}
-    			default '6';
-    			description
-    				"variable from 1 to 10";
-    		}
-    		
-    		leaf demotype {
-    			type identityref {
-    				base demo:demo-type;
-    			}
-    			default 'type1';
     		}
     	}
-    }
     
     notification greet-message {
     	leaf message {
