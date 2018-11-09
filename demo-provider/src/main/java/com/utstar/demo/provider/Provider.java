@@ -144,7 +144,7 @@ public class Provider implements DemoService, DataTreeChangeListener<DataModel>,
 
             @Override
             public void onFailure(Throwable throwable) {
-                logger.error("Put the DataModel operational data into the MD-SAL data store faile");
+                logger.error("Put the DataModel operational data into the MD-SAL data store faile", e);
             }
 
         });
@@ -156,8 +156,8 @@ public class Provider implements DemoService, DataTreeChangeListener<DataModel>,
         try {
             notificationPublishService.putNotification(messageBuilder.build());
         } catch (InterruptedException e) {
-            logger.error("WRITE:Convert data changes to notification publish error;"
-                    + rootNode.getDataAfter().toString() + e);
+            logger.error("WRITE:Convert data changes to notification publish error; {}", 
+                    rootNode.getDataAfter(),  e);
         }
     }
 
